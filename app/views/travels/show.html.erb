@@ -1,0 +1,10 @@
+<h1>Trabel easier</h1>
+<h3>Travel詳細</h3>
+<div class="travel">
+  <p><%= @travel.destination %></p>
+  <p><%= @travel.created_at %></p>
+</div>
+
+<%= link_to "編集する", edit_travel_path(@travel.id) %>
+
+<%= link_to "投稿一覧に戻る", travels_path %>

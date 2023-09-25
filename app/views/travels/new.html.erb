@@ -1,0 +1,16 @@
+<h1>original tavel</h1>
+<h3>プラン作成</h3>
+<%= form_for @travel do |f| %>
+  <div class="field">
+    <%= f.label :destination %>
+    <%= f.text_field :destination, :size => 140 %>
+  </div>
+  
+  <div class="field">
+   <%= f.label :image %>
+   <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "Tweetする" %>
+<% end %>
+<%= link_to "Tweet一覧に戻る", travels_path %>
