@@ -44,6 +44,10 @@ class TravelsController < ApplicationController
         redirect_to action: :index
     end
 
+    
+
+   
+
     private
     def travel_params
       params.require(:travel).permit(:destination, :image)

@@ -1,16 +1,39 @@
-<h1>original tavel</h1>
-<h3>プラン作成</h3>
+<%= stylesheet_link_tag 'new', :media => "all" %>
+
+<h1>プラン作成</h1>
 <%= form_for @travel do |f| %>
   <div class="field">
-    <%= f.label :destination %>
-    <%= f.text_field :destination, :size => 140 %>
+    <%= f.label :プラン名： %>
+    <%= f.text_field :planname, :size => 20 %>
   </div>
   
   <div class="field">
-   <%= f.label :image %>
-   <%= f.file_field :image %>
+  <%= f.label :日程： %>
+  <%= f.text_field :date, :size => 10 %>
+  <%= link_to "旅程詳細", travels_date_path %>
+ </div>
+
+ <div class="field">
+  <%= f.label :人数： %>
+  <%= f.text_field :number, :size => 5 %>
+  <%= f.label :人 %>
+ </div>
+
+ <div class="field">
+ <%= f.label :宿泊地： %>
+ <%= f.text_field :accommodation, :size => 10 %>
+</div>
+
+  <div class="field">
+   <%= f.label :移動手段： %>
+   <%= f.text_field :transportation, :size => 20 %>
   </div>
 
-  <%= f.submit "Tweetする" %>
+  <div class="field">
+  <%= f.label :プラン説明： %>
+  <%= f.text_field :body, :size => 50 %>
+ </div>
+
+
+  <%= f.submit "投稿する" %>
 <% end %>
-<%= link_to "Tweet一覧に戻る", travels_path %>

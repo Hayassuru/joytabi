@@ -1,0 +1,11 @@
+databases:
+  - name: joytabi_DB
+    databaseName: joytabi_db
+    user: joytabi
+    region: singapore
+
+services:
+  - type: web
+    name: joytabi
+    env: ruby
+    region: singapore

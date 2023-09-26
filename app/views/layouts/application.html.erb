@@ -17,7 +17,7 @@
     <ul>
     <li><%= link_to "ホーム", toppage_index_path %></li>
     <li><%= link_to"投稿一覧", travels_path%></li>
-    <li><%= link_to "新規投稿",new_travel_path %></li>
+    <li><%= link_to "プラン作成",new_travel_path %></li>
     <li><% if user_signed_in? %>
           <%= link_to "マイページ", user_path(current_user.id) %>
         <% end %></li>
